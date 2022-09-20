@@ -4,9 +4,11 @@ const GameItem = ({ dataGames }) => {
 console.log(dataGames.slice(0, 20))
   return (
     <>
-    <h2>Game</h2>
+    {dataGames.slice(0, 20).map((game, index) => {
+        return <p key={index}>{game.title}</p>
+    })}
     </>
   )
 }
 
-export default GameItem
+export default GameItem;
