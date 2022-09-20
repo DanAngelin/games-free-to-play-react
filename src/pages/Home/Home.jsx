@@ -1,8 +1,14 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import Box from '../../components/UI/Box';
-import classes from "./Home.module.css"
+import useGames from '../../components/hooks/useGames';
+import classes from "./Home.module.css";
 
 const Home = () => {
+
+    const dataGames = useGames()
+
+   console.log(dataGames.splice(0, 30))
+
   return (
     <Box>Home</Box>
   )
