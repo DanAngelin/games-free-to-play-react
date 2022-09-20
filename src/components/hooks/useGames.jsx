@@ -8,19 +8,20 @@ const useGames = () => {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
         headers: {
-          'X-RapidAPI-Key': '*************************',
+          'X-RapidAPI-Key': '******',
           'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
         }
       };
 
     useEffect(() => {
           
-          axios.request(options).then(function (response) {
+         const fetchGames = () => { axios.request(options).then(function (response) {
             setDataGames(response.data);
           }).catch(function (error) {
               console.error(error);
           });
-   
+        }
+        fetchGames();
 
     }, []);
     
