@@ -1,0 +1,7 @@
+.App {
+  font-size: 2rem;
+  padding-top: 2rem;
+  color: blue;
+  min-height: 100vh;
+  background-image: linear-gradient(to right,#695ED4, #1B0C43);
+}

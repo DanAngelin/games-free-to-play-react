@@ -1,10 +1,11 @@
 
-import './App.css';
+import classes from './App.module.css';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <h2>Games Free to Play</h2>
+    <div className={classes.App}>
+      <Home />
     </div>
   );
 }
