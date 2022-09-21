@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import classes from './Logo.module.css';
 import { CgGames } from 'react-icons/cg';
 
 const Logo = () => {
   return (
-    <div>
+    <div className={classes.logo}>
         <CgGames />
     </div>
   )
