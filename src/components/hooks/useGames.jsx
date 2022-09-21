@@ -5,7 +5,8 @@ import axios from 'axios';
 const useGames = () => {
     const [dataGames, setDataGames] = useState([]);
 
-    const options = {
+    useEffect(() => {
+      const options = {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
         headers: {
@@ -13,8 +14,6 @@ const useGames = () => {
           'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
         }
       };
-
-    useEffect(() => {
           
          const fetchGames = () => { axios.request(options).then(function (response) {
             setDataGames(response.data);

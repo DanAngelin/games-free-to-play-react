@@ -8,7 +8,7 @@ console.log(dataGames.slice(0, 20))
     {dataGames.slice(0, 20).map((game) => {
         return <div key={game.id} className={classes.game}>
         <p className={classes.game_title}>{game.title}</p>
-        <img src={game.thumbnail}></img>
+        <img src={game.thumbnail} alt={game.title}></img>
         <p>Genre: {game.genre}</p>
         <p>Platform: {game.platform}</p>
         <p>Publisher: {game.publisher}</p>
