@@ -8,7 +8,7 @@ import axios from 'axios';
 import { API_KEY } from '../../utils/apikey';
 
 const Game = () => {
-    const [game, setGame] = useState({});
+    const [game, setGame] = useState([]);
 
 const id = "452"
 
@@ -29,13 +29,23 @@ const id = "452"
               console.error(error);
           });
         }
+        
         fetchGame();
     }, [])
 console.log(game)
   return (
     <Box>
         <Layout>
-            <h2>Game</h2>
+            <h2>{game.title}</h2>
+            <img src={game.thumbnail}></img>
+            <p>{game.developer}</p>
+            <p>{game.short_description}</p>
+            <p>{game.genre}</p>
+            <p>{game.publisher}</p>
+            <p>{game.release_date}</p>
+            <p>{game.status}</p>
+            <p>{game.platform}</p>
+
         </Layout>
     </Box>
   )
