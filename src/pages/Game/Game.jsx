@@ -1,22 +1,23 @@
 import React from 'react';
 import classes from './Game.module.css';
+import { API_KEY } from '../../utils/apikey';
+import axios from 'axios';
 import Layout from '../../components/Layout/Layout'
 import Box from '../../components/UI/Box';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { API_KEY } from '../../utils/apikey';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Game = () => {
     const [game, setGame] = useState([]);
 
-const id = "452"
+    const params = useParams();
+    console.log(params.id)
 
     useEffect(() => {
         const options = {
             method: 'GET',
             url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
-            params: {id},
+            params: {id: params.id},
             headers: {
               'X-RapidAPI-Key': API_KEY,
               'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
