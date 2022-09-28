@@ -6,6 +6,7 @@ import Layout from '../../components/Layout/Layout'
 import Box from '../../components/UI/Box';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import {AiOutlinePlayCircle} from "react-icons/ai"
 
 const Game = () => {
     const [game, setGame] = useState([]);
@@ -32,21 +33,44 @@ const Game = () => {
         }
         
         fetchGame();
-    }, [])
+    }, [params.id])
 console.log(game)
+console.log(game.screenshots)
   return (
     <Box>
         <Layout>
-            <h2>{game.title}</h2>
-            <img src={game.thumbnail}></img>
-            <p>{game.developer}</p>
-            <p>{game.short_description}</p>
-            <p>{game.genre}</p>
-            <p>{game.publisher}</p>
-            <p>{game.release_date}</p>
-            <p>{game.status}</p>
-            <p>{game.platform}</p>
+            <div className={classes.box}>
+              <div className={classes.game}>
+              <div className={classes.game_left}>
+                <img src={game.thumbnail}></img>
+                <p>{game.short_description}</p>
+                <p>RELEASE DATE: <span>{game.release_date}</span></p>
+                <p>DEVELOPER: <span>{game.developer}</span></p>
+                <p>PUBLISHER: <span>{game.publisher}</span></p>
+              </div>
 
+              <div className={classes.game_right}>
+                <h2>{game.title}</h2>
+                <div className={classes.game_right_details}>
+                <p>GENRE: <span>{game.genre}</span></p>
+                <p>STATUS: <span>{game.status}</span></p>
+                <p>PLATFORM: <span>{game.platform}</span></p>
+                </div>
+
+                <div className={classes.btn_play}>
+                  <button><AiOutlinePlayCircle /><a href={game.game_url} target='_blank'>Play Game</a></button>
+                </div>
+              </div>
+
+              </div>
+
+              <div className={classes.game_scrn}>
+                {game.screenshots.map((game) => {
+                  return <img src={game.image} />
+                })}
+              </div>
+              
+            </div>
         </Layout>
     </Box>
   )
