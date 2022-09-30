@@ -6,13 +6,14 @@ import Layout from '../../components/Layout/Layout'
 import Box from '../../components/UI/Box';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {AiOutlinePlayCircle} from "react-icons/ai"
+import {AiOutlinePlayCircle} from "react-icons/ai";
+import {GrSystem} from "react-icons/gr"
 
 const Game = () => {
     const [game, setGame] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const params = useParams();
-    console.log(params.id)
 
     useEffect(() => {
         const options = {
@@ -25,24 +26,28 @@ const Game = () => {
             }
           };
 
-          const fetchGame = () => { axios.request(options).then(function (response) {
+          const fetchGame = async() => { 
+            setLoading(true)
+            axios.request(options).then(function (response) {
             setGame(response.data);
+            setLoading(false)
           }).catch(function (error) {
               console.error(error);
           });
         }
-        
+
         fetchGame();
-    }, [params.id])
+    }, [params])
 console.log(game)
 console.log(game.screenshots)
   return (
     <Box>
         <Layout>
+          {loading ? (<h2>...Loading</h2>) : (
             <div className={classes.box}>
-              <div className={classes.game}>
+            <div className={classes.game}>
               <div className={classes.game_left}>
-                <img src={game.thumbnail}></img>
+                <img src={game.thumbnail} alt="Game Thumbnail"></img>
                 <p>{game.short_description}</p>
                 <p>RELEASE DATE: <span>{game.release_date}</span></p>
                 <p>DEVELOPER: <span>{game.developer}</span></p>
@@ -58,19 +63,30 @@ console.log(game.screenshots)
                 </div>
 
                 <div className={classes.btn_play}>
-                  <button><AiOutlinePlayCircle /><a href={game.game_url} target='_blank'>Play Game</a></button>
+                  <button><AiOutlinePlayCircle /><a href={game.game_url} target='_blank' rel="noreferrer">Play Game</a></button>
+                </div>
+
+                <div className={classes.game_sys}>
+                  <h3><GrSystem /> SYS MIN REQ</h3>
+                  <p>GRAPHICS: <span>{game.minimum_system_requirements.graphics}</span></p>
+                  <p>MEMORY: <span>{game.minimum_system_requirements.memory}</span></p>
+                  <p>OS: <span>{game.minimum_system_requirements.os}</span></p>
+                  <p>PROCESSOR: <span>{game.minimum_system_requirements.processor}</span></p>
+                  <p>STORAGE: <span>{game.minimum_system_requirements.storage}</span></p>
                 </div>
               </div>
 
-              </div>
-
-              <div className={classes.game_scrn}>
-                {game.screenshots.map((game) => {
-                  return <img src={game.image} />
-                })}
-              </div>
-              
             </div>
+
+            <div className={classes.game_scrn}>
+              {game.screenshots.map((game, index) => {
+                return <img src={game.image} key={index} alt="screenshot"/>
+              })}
+            </div>
+            
+          </div>
+          )}
+
         </Layout>
     </Box>
   )

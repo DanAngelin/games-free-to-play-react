@@ -11,10 +11,12 @@
 
 .game {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 2rem;
     padding: 1rem;
     border-radius: 1rem;
+    position: relative;
 }
 
 .game_left {
@@ -22,6 +24,10 @@
     flex-direction: column;
     gap: 1rem;
     width: 36rem;
+}
+
+.game_left img {
+    width: 100%;
 }
 
 .game_left p {
@@ -51,7 +57,7 @@
     justify-content: center;
 }
 
-.game_right_details span, .game_left span {
+.game_right_details span, .game_left span, .game_sys span {
     font-weight: 500;
     color: #67c1f5;
 }
@@ -88,4 +94,23 @@
 
 .game_scrn img {
     width: 100%;
+}
+
+.game_sys p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #695ED4;
+}
+
+.game_sys h3 {
+    font-size: 1.5rem;
+    color: #FE8100;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.game_sys svg {
+    background-color: #FE8100;
+
 }
