@@ -7,6 +7,7 @@
     padding: 1rem;
     border-radius: 1rem;
     margin: auto;
+    box-shadow: rgba(105, 94, 212, 0.35) 0px 5px 15px;
 }
 
 .game {
@@ -96,10 +97,11 @@
     width: 100%;
 }
 
-.game_sys p {
-    font-size: 2rem;
-    font-weight: 400;
-    color: #695ED4;
+.game_sys {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .game_sys h3 {
@@ -108,6 +110,16 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.game_sys p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #695ED4;
+}
+
+.game_sys p:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
 .game_sys svg {

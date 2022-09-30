@@ -4,6 +4,7 @@ import { API_KEY } from '../../utils/apikey';
 import axios from 'axios';
 import Layout from '../../components/Layout/Layout'
 import Box from '../../components/UI/Box';
+import Loading from '../../components/Loading/Loading';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {AiOutlinePlayCircle} from "react-icons/ai";
@@ -43,7 +44,7 @@ console.log(game.screenshots)
   return (
     <Box>
         <Layout>
-          {loading ? (<h2>...Loading</h2>) : (
+          {loading ? (<Loading />) : (
             <div className={classes.box}>
             <div className={classes.game}>
               <div className={classes.game_left}>
@@ -68,11 +69,11 @@ console.log(game.screenshots)
 
                 <div className={classes.game_sys}>
                   <h3><GrSystem /> SYS MIN REQ</h3>
-                  <p>GRAPHICS: <span>{game.minimum_system_requirements.graphics}</span></p>
-                  <p>MEMORY: <span>{game.minimum_system_requirements.memory}</span></p>
-                  <p>OS: <span>{game.minimum_system_requirements.os}</span></p>
-                  <p>PROCESSOR: <span>{game.minimum_system_requirements.processor}</span></p>
-                  <p>STORAGE: <span>{game.minimum_system_requirements.storage}</span></p>
+                  <p>GRAPHICS: <span>{game.minimum_system_requirements?.graphics}</span></p>
+                  <p>MEMORY: <span>{game.minimum_system_requirements?.memory}</span></p>
+                  <p>OS: <span>{game.minimum_system_requirements?.os}</span></p>
+                  <p>PROCESSOR: <span>{game.minimum_system_requirements?.processor}</span></p>
+                  <p>STORAGE: <span>{game.minimum_system_requirements?.storage}</span></p>
                 </div>
               </div>
 
