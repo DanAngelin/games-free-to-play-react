@@ -1,0 +1,22 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact a {
+    border: 3px solid #13ADF5;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all .5s;
+}
+
+.contact svg {
+    font-size: 5rem;
+    color: #13ADF5;
+}
+
+.contact a:hover {
+    border-color: #695ED4;
+    transform: translateY(-2px);
+}
