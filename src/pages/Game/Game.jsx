@@ -39,8 +39,7 @@ const Game = () => {
 
         fetchGame();
     }, [params])
-console.log(game)
-console.log(game.screenshots)
+
   return (
     <Box>
         <Layout>

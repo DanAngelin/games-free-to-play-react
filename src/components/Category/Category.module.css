@@ -1,0 +1,22 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: flex-start;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.category button {
+    border: none;
+    font-size: 1.5rem;
+    padding: 2px;
+    background-color: transparent;
+    color: #13ADF5;
+    font-weight: 600;
+    cursor: pointer;
+}

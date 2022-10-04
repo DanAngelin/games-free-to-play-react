@@ -5,5 +5,5 @@
 
 In Progress.... ⌛
 
-![Logo](https://i.imgur.com/4r8kSgh.jpg)
+![Logo](https://i.imgur.com/OIfm7px.jpg)
 ![Logo](https://i.imgur.com/ePybswi.jpg)

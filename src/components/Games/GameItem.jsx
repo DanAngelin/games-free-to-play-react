@@ -6,7 +6,7 @@ const GameItem = ({ dataGames }) => {
 
   return (
     <>
-    {dataGames.slice(0, 12).map((game) => {
+    {dataGames.slice(0, 15).map((game) => {
         return <Link to={"/game/" + game.id} key={game.id} className={classes.link}>
                   <div className={classes.game}>
                   <p className={classes.game_title}>{game.title}</p>

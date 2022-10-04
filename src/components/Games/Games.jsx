@@ -3,14 +3,12 @@ import useGames from '../hooks/useGames';
 import Category from '../Category/Category';
 import GameItem from './GameItem';
 import classes from "./Games.module.css"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Games = () => {
   const [tag, setTag] = useState();
 
 const dataGames = useGames(tag);
-console.log(dataGames);
-console.log(tag);
 
 const tagHandler = (value) => {
   setTag(value);
