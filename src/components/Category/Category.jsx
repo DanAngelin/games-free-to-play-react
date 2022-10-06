@@ -8,7 +8,7 @@ const Category = ({ tagHandler }) => {
 
 
   return (
-    <div className={classes.category}>
+    <aside className={classes.category}>
       <h3>Tags</h3>
               {tags.map((tag, index) => {
                 return <div className={classes.tags} key={index}>
@@ -16,7 +16,7 @@ const Category = ({ tagHandler }) => {
                 <button value={tag} onClick={(btn) => tagHandler(btn.target.value)}>{tag.toUpperCase()}</button>
                 </div>
               })}
-    </div>
+    </aside>
   )
 }
 

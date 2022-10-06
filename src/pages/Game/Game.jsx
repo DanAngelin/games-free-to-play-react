@@ -9,10 +9,15 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {AiOutlinePlayCircle} from "react-icons/ai";
 import {GrSystem} from "react-icons/gr"
+import { FaWindowClose } from 'react-icons/fa'
 
 const Game = () => {
     const [game, setGame] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    // State modal screenshot
+    const [modal, setModal] = useState(false);
+    const [tempScrn, setTempScrn] = useState('');
 
     const params = useParams();
 
@@ -38,7 +43,14 @@ const Game = () => {
         }
 
         fetchGame();
-    }, [params])
+    }, [params]);
+
+
+    // Modal Screenshot
+    const getImg = (screenshot) => {
+      setTempScrn(screenshot);
+      setModal(true);
+  }
 
   return (
     <Box>
@@ -78,9 +90,17 @@ const Game = () => {
 
             </div>
 
-            <div className={classes.game_scrn}>
+            <div className={classes.screenshots}>
               {game.screenshots.map((game, index) => {
-                return <img src={game.image} key={index} alt="screenshot"/>
+                return <div className={classes.screenshot} key={index} >
+                              <img src={game.image} onClick={() => getImg(game.image)} alt="screenshot"/>
+
+                              {modal && <div className={classes.screenshot_modal}>
+                                          <FaWindowClose className={classes.close} onClick={() => setModal(false)}/>
+                                          <img src={tempScrn} alt="screenshot"/>
+                                        </div>}
+
+                  </div>
               })}
             </div>
             

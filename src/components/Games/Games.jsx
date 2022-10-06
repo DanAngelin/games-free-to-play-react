@@ -5,6 +5,7 @@ import GameItem from './GameItem';
 import classes from "./Games.module.css"
 import { useState } from 'react';
 
+
 const Games = () => {
   const [tag, setTag] = useState();
 
@@ -18,9 +19,9 @@ const tagHandler = (value) => {
   return (
     <div className={classes.games}>
         <Category tagHandler={tagHandler} className={classes.category}/>
-        <div  className={classes.gamelist}>
+        <section className={classes.gamelist}>
           <GameItem dataGames={dataGames} />
-        </div>
+        </section>
     </div>
   )
 }

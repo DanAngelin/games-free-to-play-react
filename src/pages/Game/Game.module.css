@@ -87,14 +87,59 @@
     color: #67c1f5;
 }
 
-.game_scrn {
+.screenshots {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 100%;
 }
 
-.game_scrn img {
+.screenshot img {
     width: 100%;
+    cursor: pointer;
+}
+
+.screenshot_modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    animation: openModal 1s;
+    transform-origin: center center;
+}
+
+.screenshot_modal img {
+    width: 80vw;
+}
+
+.screenshot_modal svg {
+    font-size: 3rem;
+    color: #67c1f5;
+    padding: 2px;
+    background-color: #FFFCFF;
+    border-radius: .5rem;
+    transition: all .3s;
+}
+
+.screenshot_modal svg:hover {
+    color: #695ED4;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+@keyframes openModal {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
 }
 
 .game_sys {

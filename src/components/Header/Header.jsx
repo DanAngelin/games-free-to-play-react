@@ -5,10 +5,10 @@ import Nav from './Nav/Nav'
 
 const Header = () => {
   return (
-    <div className={classes.header}>
+    <header className={classes.header}>
       <Logo />
       <Nav />
-    </div>
+    </header>
   )
 }
 
