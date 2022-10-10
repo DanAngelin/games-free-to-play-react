@@ -6,3 +6,9 @@
 .logo svg {
     font-size: 9rem;
 }
+
+@media screen and (max-width: 500px) {
+    .logo svg {
+        font-size: 5rem;
+    }
+}

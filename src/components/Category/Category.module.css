@@ -20,3 +20,23 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 500px) {
+    .category h3 {
+        font-size: 1.5rem;
+    }
+    .category svg {
+        font-size: 1rem;
+    }
+    .category button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .category {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+};

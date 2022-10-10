@@ -171,3 +171,18 @@
     background-color: #FE8100;
 
 }
+
+
+@media screen and (max-width: 500px) {
+    .game_right h2 {
+        font-size: 2rem;
+    }
+
+    .game_sys h3 {
+        font-size: 1.3rem;
+    }
+
+    .game_sys p {
+        font-size: 1.2rem;
+    }
+}

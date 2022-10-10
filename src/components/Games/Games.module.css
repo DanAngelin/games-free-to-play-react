@@ -16,3 +16,17 @@
     gap: 2rem;
     justify-content: center;
 }
+
+@media screen and (max-width: 1000px) {
+    .games {
+        flex-direction: column;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .gamelist {
+        flex: auto;
+    }
+}
