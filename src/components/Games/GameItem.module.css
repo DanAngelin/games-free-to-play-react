@@ -1,3 +1,9 @@
+.link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
 .game {
     display: flex;
     flex-direction: column;
@@ -17,7 +23,16 @@
     color: #FBB034;
 }
 
-.link {
-    text-decoration: none;
-    color: inherit;
+.icon_fav {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    margin: .5rem .7rem 0 0;
+    cursor: pointer;
+}
+
+.icon_fav svg {
+    font-size: 2.5rem;
+    color: #FBB034;
 }

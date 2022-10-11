@@ -1,12 +1,12 @@
 .nav ul {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 2.5rem;
-    font-weight: 500;
+    gap: 1.5rem;
 }
 
 .nav ul a{
+    font-size: 2rem;
+    font-weight: 400;
     text-decoration: none;
     color: inherit;
     display: flex;
