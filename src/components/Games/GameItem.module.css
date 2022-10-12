@@ -1,6 +1,4 @@
 .link {
-    text-decoration: none;
-    color: inherit;
     position: relative;
 }
 
@@ -10,6 +8,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    color: inherit;
     border: 1px solid #695ED4;
     border-radius: 2rem;
     padding: 1rem 0;

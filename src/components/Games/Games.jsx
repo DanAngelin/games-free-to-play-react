@@ -20,7 +20,18 @@ const tagHandler = (value) => {
     <div className={classes.games}>
         <Category tagHandler={tagHandler} className={classes.category}/>
         <section className={classes.gamelist}>
-          <GameItem dataGames={dataGames} />
+          {dataGames.slice(0, 15).map((game) => {
+            return <GameItem  key={game.id}
+                              id={game.id}
+                              title={game.title}
+                              thumbnail={game.thumbnail}
+                              genre={game.genre}
+                              platform={game.platform}
+                              publisher={game.publisher}/>
+          })
+
+          }
+
         </section>
     </div>
   )
