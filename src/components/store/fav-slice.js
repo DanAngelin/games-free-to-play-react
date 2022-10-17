@@ -7,7 +7,7 @@ const favSlice = createSlice({
         totalGames: 0
     },
     reducers: {
-        addGameToFavorties(state, action) {
+        addGameToFavorites(state, action) {
             const newGame = action.payload;
             const existingGame = state.games.find(game => game.id === newGame.id)
             console.log(state.games)
@@ -16,7 +16,7 @@ const favSlice = createSlice({
                 state.games.push({id: newGame.id, title: newGame.title, thumbnail: newGame.thumbnail, genre: newGame.genre})
             } 
         },
-        removeGameFromFavorties(state, action) {
+        removeGameFromFavorites(state, action) {
             const id = action.payload;
             const existingGame = state.games.find(game => game.id === id);
             state.totalGames--;

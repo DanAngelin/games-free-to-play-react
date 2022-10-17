@@ -11,7 +11,7 @@ const GameItem = ({ id, title, thumbnail, genre, platform, publisher }) => {
   const dispatch = useDispatch()
 
   const addToFavHandler = () => {
-    dispatch(favActions.addGameToFavorties({
+    dispatch(favActions.addGameToFavorites({
       id,
       title,
       thumbnail,

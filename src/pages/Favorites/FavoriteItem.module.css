@@ -1,0 +1,49 @@
+.favorites {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.game {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    padding: .5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #695ED4;
+    border-radius: 3rem;
+    position: relative;
+}
+
+.game h2 {
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+}
+
+.game img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game p {
+    font-size: 1.5rem;
+}
+
+.btn_delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.btn_delete svg {
+    font-size: 2rem;
+    color: #FFDD00;
+}
