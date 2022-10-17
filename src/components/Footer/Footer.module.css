@@ -1,9 +1,17 @@
 .footer {
-    margin-top: 2rem;
+    width: 100%;
     border-radius: 2rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     text-align: center;
     border: 1px solid #695ED4;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+}
+
+.footer h3 {
+    font-size: 2rem;
 }

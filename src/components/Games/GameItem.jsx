@@ -1,14 +1,22 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { favActions } from '../store/fav-slice';
 import classes from "./GameItem.module.css";
 import { Link } from 'react-router-dom';
-import { MdFavoriteBorder } from 'react-icons/md'
+import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
+import { useState } from 'react';
 
 const GameItem = ({ id, title, thumbnail, genre, platform, publisher }) => {
+  const [favorite, setFavorite] = useState(false);
+  const findId = useSelector(state => state.fav.games)
+  console.log(findId)
 
   console.log(id )
   const dispatch = useDispatch()
+
+  const removeGameFromFavHandler = (id) => {
+    dispatch(favActions.removeGameFromFavorites(id))
+  }
 
   const addToFavHandler = () => {
     dispatch(favActions.addGameToFavorites({
@@ -21,7 +29,11 @@ const GameItem = ({ id, title, thumbnail, genre, platform, publisher }) => {
 
   return (
     <div className={classes.link}>
+                  {findId.find(game => game.id === id) ? <button onClick={() => removeGameFromFavHandler(id)} className={classes.icon_fav}><MdFavorite /></button>
+                  :
                   <button onClick={addToFavHandler} className={classes.icon_fav}><MdFavoriteBorder /></button>
+                  }
+
                   <Link to={"/game/" + id} className={classes.game}>
                       <p className={classes.game_title}>{title}</p>
                       <img src={thumbnail} alt={title}></img>

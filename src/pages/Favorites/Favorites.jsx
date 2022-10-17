@@ -14,7 +14,10 @@ const Favorites = (props) => {
   return (
     <Box>
         <Layout>
-          <FavoriteItem favGames={favGames}/>
+          <div className={classes.page_favorites}>
+            <h3>Favorites ❤️ Games</h3>
+            <FavoriteItem favGames={favGames}/>
+          </div>
         </Layout>
     </Box>
   )

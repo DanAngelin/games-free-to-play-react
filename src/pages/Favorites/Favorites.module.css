@@ -1,0 +1,9 @@
+.page_favorites {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page_favorites h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
