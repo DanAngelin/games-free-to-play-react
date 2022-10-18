@@ -4,14 +4,11 @@ import { favActions } from '../store/fav-slice';
 import classes from "./GameItem.module.css";
 import { Link } from 'react-router-dom';
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
-import { useState } from 'react';
 
 const GameItem = ({ id, title, thumbnail, genre, platform, publisher }) => {
-  const [favorite, setFavorite] = useState(false);
-  const findId = useSelector(state => state.fav.games)
-  console.log(findId)
 
-  console.log(id )
+  const findId = useSelector(state => state.fav.games)
+
   const dispatch = useDispatch()
 
   const removeGameFromFavHandler = (id) => {

@@ -9,8 +9,8 @@ const favSlice = createSlice({
     reducers: {
         addGameToFavorites(state, action) {
             const newGame = action.payload;
-            const existingGame = state.games.find(game => game.id === newGame.id)
-            console.log(state.games)
+            const existingGame = state.games.find(game => game.id === newGame.id);
+
             if (!existingGame) {
                 state.totalGames++;
                 state.games.push({id: newGame.id, title: newGame.title, thumbnail: newGame.thumbnail, genre: newGame.genre})

@@ -7,3 +7,9 @@
     text-align: center;
     margin-bottom: 3rem;
 }
+
+.page_favorites p {
+    text-align: center;
+    color: #FBB034;
+    font-weight: 500;
+}

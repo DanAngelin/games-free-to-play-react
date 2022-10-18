@@ -3,7 +3,7 @@
 - 🧑‍💻 CSS | React
 - 🧩 API ➡️ www.freetogame.com/api-doc ➡️ Games Database API
 
-- React Router DOM, Icons: react-icons, axios,
+- React Router DOM, Icons: react-icons, axios, redux,
 
 In Progress.... ⌛
 

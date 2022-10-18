@@ -3,7 +3,7 @@ import classes from './Nav.module.css'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { IoMdHome } from 'react-icons/io';
-import { MdEmail, MdFavoriteBorder } from 'react-icons/md';
+import { MdEmail, MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 
 const Nav = () => {
 
@@ -14,7 +14,7 @@ const Nav = () => {
       <ul>
         <Link to="/"><IoMdHome />Home</Link>
         <Link to="/contact"><MdEmail />Contact</Link>
-        <Link to="/favorites" className={classes.fav_total}><MdFavoriteBorder /><p>{favTotal}</p></Link>
+        <Link to="/favorites" className={classes.fav_total}>{favTotal > 0 ? <MdFavorite /> : <MdFavoriteBorder />}<p>{favTotal}</p></Link>
       </ul>
     </div>
   )
