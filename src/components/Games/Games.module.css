@@ -1,20 +1,19 @@
 .games {
     display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
 }
 
-.category {
-    width: 25%;
+.container_games {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
 }
 
 .gamelist {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
 @media screen and (max-width: 1000px) {

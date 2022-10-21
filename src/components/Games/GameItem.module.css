@@ -16,8 +16,17 @@
     text-decoration: none;
 }
 
+.detail {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.game img {
+    width: 100%;
+}
+
 .game_title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #FBB034;
 }
@@ -29,9 +38,14 @@
     background-color: transparent;
     margin: .5rem .7rem 0 0;
     cursor: pointer;
+    transition: all .5s;
 }
 
 .icon_fav svg {
     font-size: 2.5rem;
     color: #FBB034;
+}
+
+.icon_fav svg:active {
+    transform: scale(1.1);
 }

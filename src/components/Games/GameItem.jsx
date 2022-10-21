@@ -34,9 +34,9 @@ const GameItem = ({ id, title, thumbnail, genre, platform, publisher }) => {
                   <Link to={"/game/" + id} className={classes.game}>
                       <p className={classes.game_title}>{title}</p>
                       <img src={thumbnail} alt={title}></img>
-                      <p>Genre: {genre}</p>
-                      <p>Platform: {platform}</p>
-                      <p>Publisher: {publisher}</p>
+                      <p className={classes.detail}><span>Genre:</span> {genre}</p>
+                      <p className={classes.detail}><span>Platform:</span> {platform}</p>
+                      <p className={classes.detail}><span>Publisher:</span> {publisher}</p>
                 </Link>
     </div>
   )

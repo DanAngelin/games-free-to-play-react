@@ -1,0 +1,21 @@
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.btn_page {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: #695ED4;
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 4px;
+};
+
+.btn_page:hover {
+    transform: translateY(6px);
+    color: black;
+}
