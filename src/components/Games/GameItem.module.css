@@ -1,4 +1,8 @@
-.link {
+.box {
+    margin-top: 0;
+}
+
+.game_box {
     position: relative;
 }
 
@@ -16,7 +20,7 @@
     text-decoration: none;
 }
 
-.detail {
+.game_info {
     font-size: 1.3rem;
     font-weight: 500;
 }
@@ -27,11 +31,12 @@
 
 .game_title {
     font-size: 1.8rem;
+    text-align: center;
     font-weight: 600;
     color: #FBB034;
 }
 
-.icon_fav {
+.game_icon_fav {
     position: absolute;
     right: 0;
     border: none;
@@ -41,11 +46,11 @@
     transition: all .5s;
 }
 
-.icon_fav svg {
+.game_icon_fav svg {
     font-size: 2.5rem;
     color: #FBB034;
 }
 
-.icon_fav svg:active {
+.game_icon_fav svg:active {
     transform: scale(1.1);
 }

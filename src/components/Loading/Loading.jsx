@@ -4,8 +4,11 @@ import classes from "./Loading.module.css"
 const Loading = () => {
   return (
     <div className={classes.loading}>
-        <p>Loading</p>
-        <div className={classes.spin}></div>
+
+      <p>Loading</p>
+
+      <div className={classes.spin}></div>
+      
     </div>
   )
 }

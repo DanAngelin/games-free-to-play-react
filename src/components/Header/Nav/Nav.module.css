@@ -4,6 +4,10 @@
     gap: 1.5rem;
 }
 
+.nav ul li {
+    list-style: none;
+}
+
 .nav ul a{
     font-size: 2rem;
     font-weight: 400;
@@ -11,6 +15,11 @@
     color: inherit;
     display: flex;
     align-items: center;
+    transition: all .5s;
+}
+
+.nav ul a:hover {
+    color: #13ADF5;
 }
 
 .fav_total {

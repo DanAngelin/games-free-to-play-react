@@ -10,12 +10,18 @@ const Category = ({ tagHandler, paginate }) => {
   return (
     <aside className={classes.category}>
       <h3>Tags</h3>
+
               {tags.map((tag, index) => {
-                return <div className={classes.tags} key={index}>
-                  {index % 2 ? <VscDebugBreakpointFunction style={{color: "#FF4E02"}} /> : <VscDebugBreakpointData style={{color: "#FFDD00"}}/>}
-                <button value={tag} onClick={(btn) => {tagHandler(btn.target.value); paginate(1)}}>{tag.toUpperCase()}</button>
-                </div>
+                return  <div className={classes.tags} key={index}>
+                          {index % 2 ? 
+                            <VscDebugBreakpointFunction style={{color: "#FF4E02"}} /> 
+                            : 
+                            <VscDebugBreakpointData style={{color: "#FFDD00"}}/>}
+                            
+                          <button value={tag} onClick={(btn) => {tagHandler(btn.target.value); paginate(1)}}>{tag.toUpperCase()}</button>
+                        </div>
               })}
+
     </aside>
   )
 }

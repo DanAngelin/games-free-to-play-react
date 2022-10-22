@@ -14,17 +14,17 @@ const FavoriteItem = ({ favGames }) => {
 
   return (
     <div className={classes.favorites}>
-    {favGames.map((game) => (
-      <div className={classes.box_game} key={game.id}>
-        <button onClick={() => removeGameFromFavHandler(game.id)} className={classes.btn_delete}><RiChatDeleteFill /></button>
-        <Link to={"/game/" + game.id} className={classes.game}>
-          <h2>{game.title}</h2>
-          <img src={game.thumbnail} alt={game.title}/>
-          <p>Genre: {game.genre}</p>
-        </Link>
-      </div>
-    ))}
-  </div>
+      {favGames.map((game) => (
+        <div className={classes.box_game} key={game.id}>
+          <button onClick={() => removeGameFromFavHandler(game.id)} className={classes.btn_delete}><RiChatDeleteFill /></button>
+          <Link to={"/game/" + game.id} className={classes.game}>
+            <h2>{game.title}</h2>
+            <img src={game.thumbnail} alt={game.title}/>
+            <p>Genre: {game.genre}</p>
+          </Link>
+        </div>
+      ))}
+    </div>
   )
 }
 

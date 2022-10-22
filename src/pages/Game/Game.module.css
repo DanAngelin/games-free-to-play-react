@@ -1,6 +1,7 @@
 .box {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     gap: 2rem;
     width: 75%;
     border: 1px solid #695ED4;
@@ -107,6 +108,7 @@
     transition: all 1s;
     animation: openModal 1s;
     transform-origin: center center;
+    z-index: 2;
 }
 
 .screenshot_modal img {
@@ -130,6 +132,26 @@
     position: absolute;
     right: 0;
     cursor: pointer;
+}
+
+.game__icon_fav {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    margin: .5rem .7rem 0 0;
+    cursor: pointer;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.game__icon_fav svg {
+    font-size: 2.5rem;
+    color: #FBB034;
+}
+
+.game__icon_fav svg:active {
+    transform: scale(1.1);
 }
 
 @keyframes openModal {

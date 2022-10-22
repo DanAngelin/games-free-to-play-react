@@ -27,9 +27,12 @@ const tagHandler = (value) => {
 
   return (
     <div className={classes.games}>
+
         <Category tagHandler={tagHandler} paginate={paginate} className={classes.category}/>
+
         <div className={classes.container_games}>
-          <section className={classes.gamelist}>
+
+          <section className={classes.games__list}>
             {currentGames.map((game) => {
               return <GameItem  key={game.id}
                                 id={game.id}
@@ -39,11 +42,11 @@ const tagHandler = (value) => {
                                 platform={game.platform}
                                 publisher={game.publisher}/>
             })
-
             }
           </section>
 
           <Pagination currentPage={currentPage} gamesPerPage={gamesPerPage} totalGames={dataGames.length} paginate={paginate}/>
+
         </div>
     </div>
   )

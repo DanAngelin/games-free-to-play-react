@@ -6,9 +6,9 @@ import { CgGames } from 'react-icons/cg';
 const Logo = () => {
   return (
     <Link to="/">
-        <div className={classes.logo}>
+      <div className={classes.logo}>
         <CgGames />
-    </div>
+      </div>
     </Link>
   )
 }

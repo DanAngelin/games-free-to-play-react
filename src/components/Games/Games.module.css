@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.gamelist {
+.games__list {
     gap: 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -25,7 +25,7 @@
         width: 100%;
     }
 
-    .gamelist {
+    .games__list {
         flex: auto;
     }
 }
