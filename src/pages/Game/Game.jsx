@@ -106,7 +106,7 @@ const Game = (props) => {
 
                         {/* Button Play Game */}
                   <div className={classes.btn_play}>
-                    <button><AiOutlinePlayCircle /><a href={game.game_url} target='_blank' rel="noreferrer">Play Game</a></button>
+                  <a href={game.game_url} target='_blank' rel="noreferrer"><button><AiOutlinePlayCircle />Play Game</button></a>
                   </div>
 
                         {/* System requirements */}

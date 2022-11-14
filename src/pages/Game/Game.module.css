@@ -1,6 +1,7 @@
 .box {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     gap: 2rem;
     width: 75%;
@@ -14,6 +15,7 @@
 .game {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     gap: 2rem;
     padding: 1rem;
@@ -64,7 +66,14 @@
     color: #67c1f5;
 }
 
+.btn_play a {
+    text-decoration: none;
+}
+
 .btn_play button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FFFCFF;
     background-image: linear-gradient(45deg,#695ED4, #1B0C43);
     padding: 1rem 1.5rem;
     border: none;
@@ -74,18 +83,16 @@
     align-items: center;
     gap: .5rem;
     cursor: pointer;
-}
-
-.btn_play button a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #FFFCFF;
+    transition: all .5s;
 }
 
 .btn_play button svg {
     font-size: 2rem;
     color: #67c1f5;
+}
+
+.btn_play button:active {
+    transform: scale(1.05);
 }
 
 .screenshots {
@@ -192,6 +199,12 @@
 .game_sys svg {
     background-color: #FE8100;
 
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 95%;
+    }
 }
 
 
