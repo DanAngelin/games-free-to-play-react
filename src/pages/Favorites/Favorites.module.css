@@ -13,3 +13,9 @@
     color: #FBB034;
     font-weight: 500;
 }
+
+@media screen and (max-width: 25em) {
+    .page_favorites h3 {
+        font-size: 1.8rem;
+    }
+}

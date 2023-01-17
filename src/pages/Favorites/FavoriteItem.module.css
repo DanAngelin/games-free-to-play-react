@@ -47,9 +47,55 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
+    z-index: 1;
 }
 
 .btn_delete svg {
     font-size: 2rem;
     color: #FFDD00;
+}
+
+@media screen and (max-width: 43.75em) {
+    .favorites {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game img {
+        height: auto;
+    }
+
+    .game {
+        width: 100%;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .game h2 {
+        position: absolute;
+        top: 0;
+        border-radius: 1rem;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3617822128851541) 11%, rgba(33,31,68,1) 100%);
+    }
+
+    .game p {
+        position: absolute;
+        bottom: 0;
+        padding: 0 .5rem;
+        border-radius: 1rem;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3617822128851541) 11%, rgba(33,31,68,1) 100%);
+    }
+}
+
+@media screen and (max-width: 25em) {
+    .game h2 {
+        font-size: 1.2rem;
+    }
+
+    .game p {
+        font-size: 1.2rem;
+    }
 }
