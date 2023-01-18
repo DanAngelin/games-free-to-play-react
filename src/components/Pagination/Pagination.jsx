@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from './Pagination.module.css';
 
 const Pagination = ({ currentPage, gamesPerPage, totalGames, paginate }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [paginate]);
 
     const totalPages = [];
     for(let i = 1; i <= Math.ceil(totalGames / gamesPerPage); i++) {
